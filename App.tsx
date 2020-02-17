@@ -1,6 +1,6 @@
 import React from 'react';
-import {RegisterScreen} from './src/screens';
+import {Router} from './src/navigations';
 
 export default function App() {
-  return <RegisterScreen />;
+  return <Router />;
 }

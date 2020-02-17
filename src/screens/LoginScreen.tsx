@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {Input} from '../components';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Image source={require('../assets/logo.png')} />
@@ -18,7 +18,9 @@ export default function LoginScreen() {
       <Input placeholder="Password" secureTextEntry />
       <View style={styles.containerBottom}>
         <Text>New Here? Register</Text>
-        <TouchableOpacity style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+          onPress={() => navigation.navigate('Register')}>
           <Text style={styles.button}>GO!</Text>
         </TouchableOpacity>
       </View>
@@ -36,7 +38,6 @@ const styles = StyleSheet.create({
     marginTop: 200,
     width: '100%',
     alignItems: 'center',
-    // justifyContent: 'center',
   },
   title: {
     fontSize: 30,
