@@ -20,5 +20,6 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     borderRadius: 10,
     borderColor: '#AB000D',
+    height: 45,
   },
 });
