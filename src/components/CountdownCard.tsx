@@ -15,7 +15,7 @@ export default function CountdownCard({
 }: CountdownCardProps) {
   return (
     <View style={styles.container}>
-      <Text style={styles.titleText}>Promo shifts in:</Text>
+      <Text style={styles.title}>Promo shifts in:</Text>
       <View style={styles.timesContainer}>
         <TimeCountdown timeText={hoursText} unitText="hours" />
         <Text style={styles.timeText}>:</Text>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  titleText: {
+  title: {
     color: '#FFD500',
     fontSize: 12,
   },

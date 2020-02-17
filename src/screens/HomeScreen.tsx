@@ -23,7 +23,8 @@ export default function HomeScreen() {
           <ContainerTitle title="Promoted" />
           <PromoCard
             title="Burger King"
-            subtitle="50% off al; dishes! only on this hour"
+            subtitle="50% off all dishes! only on this hour"
+            image={require('../assets/burgerkingPromo.png')}
           />
         </View>
       </View>

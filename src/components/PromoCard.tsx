@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Platform, Text} from 'react-native';
+import {View, StyleSheet, Platform, Text, Image} from 'react-native';
 
 export interface PromoCardProps {
   title?: string;
@@ -14,10 +14,12 @@ export default function PromoCard({
 }: PromoCardProps) {
   return (
     <View style={styles.container}>
-      <View />
       <View>
-        <Text style={styles.titleText}>{title}</Text>
-        <Text style={styles.titleText}>{subtitle}</Text>
+        <Image source={image} />
+      </View>
+      <View>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subtitle}>{subtitle}</Text>
       </View>
     </View>
   );
@@ -26,12 +28,9 @@ export default function PromoCard({
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
-    backgroundColor: '#E53735',
-    borderRadius: 10,
-    paddingBottom: 7,
-    paddingTop: 11,
-    paddingHorizontal: 15,
-    color: '#FFD500',
+    backgroundColor: 'white',
+    borderRadius: 3,
+    paddingHorizontal: 7,
 
     ...Platform.select({
       android: {
@@ -48,8 +47,12 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  titleText: {
-    color: '#FFD500',
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  subtitle: {
+    marginTop: 8,
     fontSize: 12,
   },
   timesContainer: {
