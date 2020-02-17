@@ -1,17 +1,6 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet} from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+import {Router} from './src/navigations';
 
 export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen />
-    </SafeAreaView>
-  );
+  return <Router />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
