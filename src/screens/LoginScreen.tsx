@@ -18,7 +18,7 @@ export default function LoginScreen() {
       <Input placeholder="Password" secureTextEntry />
       <View style={styles.containerBottom}>
         <Text>New Here? Register</Text>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.buttonContainer}>
           <Text style={styles.button}>GO!</Text>
         </TouchableOpacity>
       </View>
@@ -42,12 +42,16 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#AB000D',
   },
-  button: {
+  buttonContainer: {
     margin: 15,
     borderRadius: 100,
     width: 60,
     height: 60,
     backgroundColor: '#AB000D',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  button: {
     textAlignVertical: 'center',
     textAlign: 'center',
     color: '#FFFFFF',
