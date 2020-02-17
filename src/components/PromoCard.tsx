@@ -15,9 +15,9 @@ export default function PromoCard({
   return (
     <View style={styles.container}>
       <View>
-        <Image source={image} />
+        <Image source={image} style={styles.image} />
       </View>
-      <View>
+      <View style={styles.textView}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.subtitle}>{subtitle}</Text>
       </View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: 'white',
     borderRadius: 3,
-    paddingHorizontal: 7,
+    // borderWidth: 1,
 
     ...Platform.select({
       android: {
@@ -55,13 +55,13 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 12,
   },
-  timesContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  image: {
+    width: '100%',
+    borderTopRightRadius: 3,
+    borderTopLeftRadius: 3,
   },
-  timeText: {
-    fontSize: 60,
-    includeFontPadding: false,
-    color: '#F1BC31',
+  textView: {
+    paddingHorizontal: 7,
+    paddingBottom: 6,
   },
 });
