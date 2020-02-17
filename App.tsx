@@ -1,16 +1,11 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import SplashScreen from './src/screens/SplashScreen';
-import HomeScreen from './src/screens/HomeScreen';
+import {SafeAreaView} from 'react-native';
+import {RegisterScreen} from './src/screens';
 
 export default function App() {
-  return <HomeScreen />;
+  return (
+    <SafeAreaView>
+      <RegisterScreen />
+    </SafeAreaView>
+  );
 }
-
-const styles = StyleSheet.create({
-  // container: {
-  //   // flex: 1,
-  //   // alignItems: 'center',
-  //   // justifyContent: 'center',
-  // },
-});
