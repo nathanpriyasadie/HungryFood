@@ -1,12 +1,15 @@
 import React from 'react';
 import {TextInputProps, TextInput, StyleSheet} from 'react-native';
 
-export interface InputProps extends TextInputProps {}
+export interface InputProps extends TextInputProps {
+  refInput?(instance: TextInput): void;
+}
 
-export default function Input({style, ...props}: InputProps) {
+export default function Input({refInput, style, ...props}: InputProps) {
   return (
     <TextInput
       {...props}
+      ref={instance => instance && refInput && refInput(instance)}
       style={StyleSheet.flatten([styles.inputBox, style])}
     />
   );
