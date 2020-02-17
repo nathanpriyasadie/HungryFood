@@ -194,7 +194,6 @@
 				BC00957F27ABA178BD010A8A /* Pods-HungryFoodTests.debug.xcconfig */,
 				7E52869381CD8E93C16E4DA9 /* Pods-HungryFoodTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +307,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
