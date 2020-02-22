@@ -12,8 +12,9 @@ import CountdownCard from '../components/CountdownCard';
 import PromoCard from '../components/PromoCard';
 import {CardItemList} from '../containers/general';
 import CategoryList from '../components/CategoryList';
+import {CartCard} from '../components/CartCard';
 
-export default function HomeScreen() {
+export function HomeScreen() {
   return (
     <>
       <ScrollView style={styles.wrapper}>
@@ -51,6 +52,8 @@ export default function HomeScreen() {
           <Text style={styles.addButtonText}>+</Text>
         </TouchableOpacity>
       </View>
+
+      <CartCard />
     </>
   );
 }

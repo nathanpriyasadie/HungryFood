@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   categoryName: {
     position: 'absolute',
-    color: 'black',
+    color: 'white',
     bottom: 'auto',
     left: 'auto',
     fontSize: 14,

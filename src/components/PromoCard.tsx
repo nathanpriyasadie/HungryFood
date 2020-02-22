@@ -1,16 +1,23 @@
 import React from 'react';
-import {View, StyleSheet, Platform, Text, Image} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Platform,
+  Text,
+  Image,
+  ImageSourcePropType,
+} from 'react-native';
 
 export interface PromoCardProps {
   title?: string;
   subtitle?: string;
-  image?: string;
+  image?: ImageSourcePropType;
 }
 
 export default function PromoCard({
   title = '00',
   subtitle = '00',
-  image = '00',
+  image,
 }: PromoCardProps) {
   return (
     <View style={styles.container}>
@@ -30,7 +37,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: 'white',
     borderRadius: 3,
-    // borderWidth: 1,
 
     ...Platform.select({
       android: {

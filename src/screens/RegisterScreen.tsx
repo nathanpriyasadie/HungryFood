@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {Input} from '../components';
 
-export default function RegisterScreen() {
+export default function RegisterScreen({navigation}) {
   const [refInputEmail, setRefInputEmail] = useState<TextInput>();
   const [refInputPhone, setRefInputPhone] = useState<TextInput>();
   const [refInputPass, setRefInputPass] = useState<TextInput>();
@@ -56,7 +56,11 @@ export default function RegisterScreen() {
       <View style={styles.bottomContainer}>
         <Text>Already have an account? Login</Text>
         <TouchableOpacity style={styles.buttonContainer}>
-          <Text style={styles.button}>GO!</Text>
+          <Text
+            style={styles.button}
+            onPress={() => navigation.navigate('Home')}>
+            GO!
+          </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
